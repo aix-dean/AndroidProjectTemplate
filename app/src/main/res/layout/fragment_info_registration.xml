@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:padding="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/personalInfoTV"
+        android:text="Personal Info"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameETLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/personalInfoTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".7"
+        android:layout_margin="8dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:hintAnimationEnabled="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/genderETLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Gender"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/nameETLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".7"
+        android:layout_margin="8dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/genderET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="text"
+            android:textSize="16sp"
+            app:hintAnimationEnabled="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bdayETLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Birthday"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/ageETLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".7"
+        android:layout_margin="8dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bdayET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="date"
+            android:textSize="16sp"
+            app:hintAnimationEnabled="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailETLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/bdayETLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".7"
+        android:layout_margin="8dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="textEmailAddress"
+            android:textSize="16sp"
+            app:hintAnimationEnabled="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ageETLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Age"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/genderETLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".7"
+        android:layout_margin="8dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ageET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="number"
+            android:textSize="16sp"
+            app:hintAnimationEnabled="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/residenceETLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Residence"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/emailETLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".7"
+        android:layout_margin="8dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/residenceET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="text"
+            android:textSize="16sp"
+            app:hintAnimationEnabled="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/nextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Next"
+        android:textAllCaps="false"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/letterOfSymptomTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/guideline4"
+        app:layout_constraintBottom_toBottomOf="@id/nameOfSymptomTV"
+        app:layout_constraintTop_toTopOf="@id/nameOfSymptomTV"
+        tools:layout_editor_absoluteX="8dp"
+        tools:text="a." />
+
+    <TextView
+        android:id="@+id/nameOfSymptomTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/letterOfSymptomTV"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Name of symptoms" />
+
+    <TextView
+        android:id="@+id/symptomDescTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/nameOfSymptomTV"
+        app:layout_constraintStart_toStartOf="@+id/nameOfSymptomTV"
+        app:layout_constraintTop_toBottomOf="@id/nameOfSymptomTV"
+        tools:text="Symptom Description" />
+
+    <CheckBox
+        android:id="@+id/yesCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toStartOf="@id/noCb"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/noCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

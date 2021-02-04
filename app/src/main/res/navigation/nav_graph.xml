@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/mainDashboardFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.snap.Fragments.LogInFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_infoRegistrationFragment"
+            app:destination="@id/infoRegistrationFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_mainDashboardFragment"
+            app:destination="@id/mainDashboardFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoRegistrationFragment"
+        android:name="com.example.snap.Fragments.InfoRegistrationFragment"
+        android:label="InfoRegistrationFragment" >
+        <action
+            app:popUpToInclusive="false"
+            app:popUpTo="@id/mainFragment"
+            android:id="@+id/action_infoRegistrationFragment_to_healthChecklistFragment"
+            app:destination="@id/healthChecklistFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/healthChecklistFragment"
+        android:name="com.example.snap.Fragments.HealthChecklistFragment"
+        android:label="HealthChecklistFragment" />
+    <fragment
+        android:id="@+id/mainDashboardFragment"
+        android:name="com.example.snap.Fragments.MainDashboardFragment"
+        android:label="MainDashboardFragment" >
+        <action
+            android:id="@+id/action_mainDashboardFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+        <action
+            android:id="@+id/action_mainDashboardFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.example.snap.Fragments.WebViewFragment"
+        android:label="WebViewFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.snap.Fragments.ProfileFragment"
+        android:label="ProfileFragment" />
+</navigation>

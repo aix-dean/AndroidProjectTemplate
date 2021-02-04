@@ -8,15 +8,21 @@ apply plugin: 'com.google.firebase.crashlytics'
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
+    buildFeatures {
+        viewBinding true
+    }
 
     defaultConfig {
-        applicationId "com.example.androidprojecttemplate"
+        applicationId "com.example.snap"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // Enabling multidex support.
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -40,18 +46,35 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-
+    //MultiDex
+    implementation 'com.android.support:multidex:1.0.3'
     //Firebase Dependencies
     implementation platform('com.google.firebase:firebase-bom:26.2.0')
     implementation 'com.google.firebase:firebase-crashlytics'
     implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
+
 
     //Glide
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
-    
+    //Navigation Component
+    def nav_version = "2.3.2"
 
+    // Java language implementation
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
 
+    //Facebook SDK Login
+    implementation 'com.facebook.android:facebook-android-sdk:4.25.0'
+
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+
+    //Concat Adapter
+    implementation 'androidx.recyclerview:recyclerview:1.2.0-beta01'
+
+    implementation 'com.google.android.gms:play-services-vision:20.1.3'
 
 }

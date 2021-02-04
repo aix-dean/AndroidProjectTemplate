@@ -1,4 +1,4 @@
-package com.example.androidprojecttemplate;
+package com.example.snap;
 
 import org.junit.Test;
 
